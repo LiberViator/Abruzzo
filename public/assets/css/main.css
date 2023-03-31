@@ -1,3 +1,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-display: swap;
+		text-rendering: optimizeLegibility;
+	}
+
+	h1 {
+		@apply text-2xl;
+	}
+
+	h2 {
+		@apply text-base;
+	}
+
+	h3 {
+		@apply text-base;
+	}
+
+	h4 {
+		@apply text-base;
+	}
+
+	h5 {
+		@apply text-base;
+	}
+
+	p {
+		@apply text-base;
+	}
+
+	a {
+		@apply text-base;
+	}
+
+	.margins {
+		@apply mx-6;
+		@apply xl:mx-[unset];
+	}
+}
+
+@layer components {
+	.cta {
+		@apply whitespace-nowrap;
+		@apply h-12;
+		@apply max-w-[256px];
+		@apply px-8;
+		@apply flex;
+		@apply flex-1;
+		@apply justify-center;
+		@apply text-center;
+		@apply items-center;
+		@apply transition-colors;
+	}
+	.hero-sec {
+		@apply bg-hero;
+		@apply bg-cover;
+		@apply bg-slate-900;
+		@apply backdrop-brightness-50;
+	}
+	.hero-sec::after {
+		content: "";
+		@apply absolute;
+		@apply inset-0;
+		@apply bg-slate-900/50;
+		@apply backdrop-brightness-50;
+		@apply -z-[1];
+	}
+	.slider {
+		@apply scroll-px-6;
+		@apply xl:scroll-px-[unset];
+		@apply snap-x;
+		@apply snap-mandatory;
+		@apply overflow-x-scroll;
+		@apply overscroll-x-contain;
+		@apply scroll-smooth;
+		@apply w-full;
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+	.slider::-webkit-scrollbar {
+		@apply lg:hidden;
+	}
+	.card {
+		@apply border;
+		@apply bg-white;
+	}
+}
