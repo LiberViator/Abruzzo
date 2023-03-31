@@ -1,0 +1,25 @@
+{
+	"name": "abruzzo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"author": "",
+	"license": "ISC",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "^3.1.1",
+		"astro": "^2.1.8"
+	},
+	"devDependencies": {
+		"prettier": "^2.8.7",
+		"prettier-plugin-astro": "^0.8.0",
+		"prettier-plugin-tailwindcss": "^0.2.5",
+		"tailwindcss": "^3.3.0"
+	}
+}

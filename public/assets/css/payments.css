@@ -1,0 +1,119 @@
+/* 
+    Created on : 2014-11-26, 22:55:32
+    Author     : Zico
+*/
+
+#payments-box
+{
+    width: 400px;
+    margin: 20px auto;
+    font-family: inherit;
+}
+
+#payments-box .total-cost
+{
+    font-size: 16px;
+    margin: 20px 0 10px 0;
+    text-align: left;
+}
+
+#payments-box h3
+{
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+#form-payments
+{
+
+}
+
+.payments
+{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.payments dt
+{
+    float: left;
+}
+
+.payments dt input
+{
+    margin-top: 16px;
+}
+
+.payments dd
+{
+    float: left;
+    width: 80%;
+    margin-left: 20px;
+}
+
+.payments dd label
+{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.payments dd label span 
+{
+    position: absolute;
+    margin: 14px 0 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+#bank-info
+{
+    display: none;
+    margin: 20px 0 20px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #0c3569;
+}
+
+.btn-pay
+{
+    padding: 6px 20px;    
+    border: 1px solid #68686a;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #bbb, #68686a) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-pay:hover
+{
+    text-decoration: underline;
+}
+
+.redir-info
+{
+    font-size: 14px;
+    text-align: center;
+}
+
+.payment-message
+{
+    font-size: 18px;
+    text-align: center;
+}
+
+.cancel
+{
+    color: red;
+}
+
+.completed
+{
+    color: green;
+}

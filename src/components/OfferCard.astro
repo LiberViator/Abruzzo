@@ -1,0 +1,24 @@
+---
+const { icon, title, desc } = Astro.props;
+---
+
+<div
+	class="flex min-h-[400px] min-w-[224px] max-w-[300px] flex-[1_1_224px] flex-col border bg-white pt-8">
+	<div class="flex justify-center">
+		<img class="mb-8" width="80" width="80" src={icon} alt="illustration" />
+	</div>
+	<div class="flex flex-grow flex-col px-6">
+		<h2 class="mb-4 text-center text-xl font-semibold">{title}</h2>
+		<p class="text-center text-base">{desc}</p>
+	</div>
+	<a
+		class="group flex h-20 items-center justify-center gap-2 font-semibold text-blue"
+		href="https://abruzzo.com.pl/oprogramowanie/">
+		Dowiedz się więcej
+		<img
+			class="transition group-hover:translate-x-2"
+			src="/assets/images/arrow.svg"
+			alt="arrow"
+		/>
+	</a>
+</div>

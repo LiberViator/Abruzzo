@@ -1,0 +1,37 @@
+---
+import Title from "../components/Title.astro";
+import ProductCard from "../components/ProductCard.astro";
+---
+
+<section id="produkty" class="overflow-hidden bg-neutral-100 py-14">
+	<div class="mx-auto flex w-full max-w-5xl flex-col items-center">
+		<Title title="Nasze produkty" />
+		<div class="slider relative mb-8 w-full">
+			<div class="margins flex w-max gap-8 xl:m-auto">
+				<ProductCard
+					icon="/assets/images/gear.svg"
+					title="Comarch ERP Optima Płace i Kadry"
+					desc="Dopasowane do potrzeb, kompleksowe zarządzanie procesami biznesowymi w przedsiębiorstwie."
+					price="1625.00 zł"
+				/>
+				<ProductCard
+					icon="/assets/images/robot.svg"
+					title="Comarch IBARD ERP Backup 10GB"
+					desc="Automatyzacje powtarzalnych i nieproduktywnych czynności wykonywanych przez człowieka."
+					price="1625.00 zł"
+				/>
+				<ProductCard
+					icon="/assets/images/support.svg"
+					title="Comarch ERP OPTIMA - Pakiet START Firma"
+					desc="Wsparcie, doradctwo i opieka w zakresie systemów teleinformatycznych."
+					price="1625.00 zł"
+				/>
+			</div>
+		</div>
+
+		<a
+			class="font-semibold text-blue"
+			href="https://abruzzo.com.pl/oprogramowanie/">Zobacz wszyskie produkty</a
+		>
+	</div>
+</section>

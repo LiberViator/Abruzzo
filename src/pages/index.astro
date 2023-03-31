@@ -1,0 +1,31 @@
+---
+import Header from "../layouts/Header.astro";
+import Hero from "../layouts/Hero.astro";
+import About from "../layouts/About.astro";
+import Offer from "../layouts/Offer.astro";
+import Coop from "../layouts/Coop.astro";
+import Products from "../layouts/Products.astro";
+import Partners from "../layouts/Partners.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/src/main.css" />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+
+	<body class="overflow-x-hidden">
+		<!-- <Header /> -->
+		<Hero />
+		<About />
+		<Offer />
+		<Coop />
+		<Products />
+		<Partners />
+	</body>
+</html>

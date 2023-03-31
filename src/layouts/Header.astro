@@ -1,0 +1,72 @@
+---
+---
+
+<header class="">
+	<div class="h-10 bg-black">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-sm-12 col-xs-12">
+					<ul class="contact-icons">
+						<li>
+							<span
+								><i class="fa fa-clock-o" aria-hidden="true"></i>
+								<!-- &nbsp; {$_CFG.opening_hours} -->
+							</span>
+						</li>
+						<li>
+							<a href="tel:{$_CFG.contact_phone}"
+								><i class="fa fa-phone" aria-hidden="true"></i>
+								<!-- &nbsp;{$_CFG.contact_phone} -->
+							</a>
+						</li>
+						<li class="email">
+							<a href="{$_CFG.email}"
+								><i class="fa fa-envelope" aria-hidden="true"></i>
+								<!-- &nbsp;{$_CFG.email} -->
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-12 col-xs-12 align-right">
+					<ul class="social-icons">
+						<li class="fb">
+							<a href="{$_CFG.fb_fanpage}"
+								><i class="fa fa-facebook" aria-hidden="true"></i></a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="h-20">
+		<div class="container">
+			<div class="navbar-header">
+				<button
+					type="button"
+					class="navbar-toggle mobile-menu collapsed"
+					data-toggle="collapse"
+					data-target="#navbar"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a
+					class="logo"
+					href="{$smarty.const.BASE_URL}"
+					title=" - {$_CFG.service_name}"
+					><img
+						class="img-responsive"
+						src="{if $_CFG.service_logo}{$smarty.const.BASE_URL}upload/{$_CFG.service_logo}{else}{$smarty.const.BASE_URL}assets/images/logo.png{/if}"
+						alt=" - {$_CFG.service_name}"
+					/></a
+				>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<!-- {$Menu} -->
+			</div>
+		</div>
+	</nav>
+</header>

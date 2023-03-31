@@ -1,0 +1,91 @@
+.dropdown-checkbox-list
+{
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.dropdown-checkbox-list .label
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+    color: #555555;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dropdown-checkbox-list .label:after
+{
+    position: absolute;
+    content: '▼';
+    /*    border-left: 1px solid black;
+        border-top: 1px solid black;*/
+    padding: 5px;
+    right: 5px;
+    top: 10%;
+    /*    -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);*/
+}
+
+.dropdown-checkbox-list .label:active::after,
+.dropdown-checkbox-list.visible .label::after
+{
+    /*    top: 21%;
+        right: 8px;*/
+    content: '▲';
+}
+
+.dropdown-checkbox-list ul.items
+{
+    display: none;
+    max-height: 40vh;
+    overflow-y: scroll;    
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .15);    
+}
+
+.dropdown-checkbox-list ul.items li
+{
+    padding: 2.5px 2.5px;
+    list-style: none;
+}
+
+.dropdown-checkbox-list ul.items li label > input[type="checkbox"]
+{
+    margin: 2px 5px 0 0;
+    vertical-align: top;
+}
+
+.dropdown-checkbox-list.visible .label,
+.dropdown-checkbox-list.visible ul.items li a
+{
+    text-align: left;
+    color: var(--blue);
+}
+
+.dropdown-checkbox-list.visible .items
+{
+    display: block;
+}
