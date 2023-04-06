@@ -1,72 +1,70 @@
 ---
 ---
 
-<header class="">
-	<div class="h-10 bg-black">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-sm-12 col-xs-12">
-					<ul class="contact-icons">
-						<li>
-							<span
-								><i class="fa fa-clock-o" aria-hidden="true"></i>
-								<!-- &nbsp; {$_CFG.opening_hours} -->
-							</span>
-						</li>
-						<li>
-							<a href="tel:{$_CFG.contact_phone}"
-								><i class="fa fa-phone" aria-hidden="true"></i>
-								<!-- &nbsp;{$_CFG.contact_phone} -->
-							</a>
-						</li>
-						<li class="email">
-							<a href="{$_CFG.email}"
-								><i class="fa fa-envelope" aria-hidden="true"></i>
-								<!-- &nbsp;{$_CFG.email} -->
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-4 col-sm-12 col-xs-12 align-right">
-					<ul class="social-icons">
-						<li class="fb">
-							<a href="{$_CFG.fb_fanpage}"
-								><i class="fa fa-facebook" aria-hidden="true"></i></a
-							>
-						</li>
-					</ul>
-				</div>
-			</div>
+<header class="sticky top-0 z-10">
+	<div class="flex h-8 justify-center bg-zinc-950 text-sm text-white">
+		<ul
+			class="margins flex w-full max-w-6xl items-center justify-center gap-8 sm:justify-start">
+			<li class="hidden gap-2 whitespace-nowrap sm:flex">
+				<img src="/assets/images/clock.svg" width="16" height="16" alt="" />
+				<span>Pon - Pt 8:00 - 17:00</span>
+			</li>
+			<li>
+				<a class="flex gap-2 whitespace-nowrap" href="">
+					<img src="/assets/images/phone.svg" width="16" height="16" alt="" />
+					<span
+						class="after:content-['Zadzwoń'] sm:after:content-['+48_789_805_663']"
+					></span>
+				</a>
+			</li>
+			<li>
+				<a class="flex gap-2 whitespace-nowrap" href="">
+					<img src="/assets/images/email.svg" width="16" height="16" alt="" />
+					<span
+						class="after:content-['Napisz_maila'] sm:after:content-['biuro@abruzzo.com.pl']"
+					></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="flex h-20 w-full justify-center bg-white shadow-md">
+		<div class="margins flex w-full max-w-6xl items-center justify-between">
+			<a class="logo" href=""
+				><img
+					class="img-responsive"
+					src="/assets/images/logo.png"
+					alt=""
+					height="48"
+					width="112"
+				/></a
+			>
+			<nav class="hidden gap-4 sm:flex md:gap-8">
+				<a class="current" href="/">Strona główna</a>
+				<a href="/comarch/">Comarch</a>
+				<a href="">Oprogramowanie</a>
+				<a href="">Blog</a>
+				<a href="">Kontakt</a>
+			</nav>
+			<button
+				onclick="document.getElementById('navbar').style.display === 'none' ? navbar.style.display = 'block' : navbar.style.display = 'none'"
+				type="button"
+				class="sm:hidden"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<img src="/assets/images/menu.svg" alt="" />
+			</button>
 		</div>
 	</div>
-	<nav class="h-20">
-		<div class="container">
-			<div class="navbar-header">
-				<button
-					type="button"
-					class="navbar-toggle mobile-menu collapsed"
-					data-toggle="collapse"
-					data-target="#navbar"
-					aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a
-					class="logo"
-					href="{$smarty.const.BASE_URL}"
-					title=" - {$_CFG.service_name}"
-					><img
-						class="img-responsive"
-						src="{if $_CFG.service_logo}{$smarty.const.BASE_URL}upload/{$_CFG.service_logo}{else}{$smarty.const.BASE_URL}assets/images/logo.png{/if}"
-						alt=" - {$_CFG.service_name}"
-					/></a
-				>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<!-- {$Menu} -->
-			</div>
-		</div>
-	</nav>
+	<div
+		id="navbar"
+		style="display: none;"
+		class="absolute w-full bg-[#f5f5f5] shadow-md sm:!hidden">
+		<nav id="menu" class="z-20 flex flex-col py-4 sm:flex lg:gap-8">
+			<a class="current px-6 py-4 hover:bg-[#eee]" href="/">Strona główna</a>
+			<a class="px-6 py-3 hover:bg-[#eee]" href="/comarch/">Comarch</a>
+			<a class="px-6 py-3 hover:bg-[#eee]" href="">Oprogramowanie</a>
+			<a class="px-6 py-3 hover:bg-[#eee]" href="">Blog</a>
+			<a class="px-6 py-3 hover:bg-[#eee]" href="">Kontakt</a>
+		</nav>
+	</div>
 </header>

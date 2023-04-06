@@ -1,26 +1,29 @@
 ---
 import Title from "../components/Title.astro";
-import OfferCard from "../components/OfferCard.astro";
+import ValueCard from "../components/ValueCard.astro";
 ---
 
-<section id="oferta" class="bg-neutral-100 py-14">
-	<div class="mx-auto flex w-full max-w-5xl flex-col items-center">
+<section id="oferta" class="bg-zinc-100 py-12">
+	<div class="mx-auto flex w-full max-w-4xl flex-col items-center">
 		<Title title="Nasza oferta" />
 		<div class="margins grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-			<OfferCard
+			<ValueCard
 				icon="/assets/images/gear.svg"
 				title="Systemy ERP"
 				desc="Dopasowane do potrzeb, kompleksowe zarządzanie procesami biznesowymi w przedsiębiorstwie."
+				cta
 			/>
-			<OfferCard
+			<ValueCard
 				icon="/assets/images/robot.svg"
 				title="Robotyzacje"
 				desc="Automatyzacje powtarzalnych i nieproduktywnych czynności wykonywanych przez człowieka."
+				cta
 			/>
-			<OfferCard
+			<ValueCard
 				icon="/assets/images/support.svg"
 				title="Wsparcie IT"
 				desc="Wsparcie, doradctwo i opieka w zakresie systemów teleinformatycznych."
+				cta
 			/>
 		</div>
 	</div>

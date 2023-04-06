@@ -11,36 +11,48 @@
 	}
 
 	h1 {
-		@apply text-2xl;
+		@apply text-xl;
+		@apply sm:text-2xl;
+		@apply tracking-wide;
+		@apply leading-tight;
 	}
 
 	h2 {
-		@apply text-base;
+		@apply text-lg;
+		@apply sm:text-xl;
+		@apply leading-normal;
 	}
 
 	h3 {
-		@apply text-base;
+		@apply text-lg;
+		@apply leading-normal;
 	}
 
 	h4 {
 		@apply text-base;
+		@apply leading-normal;
 	}
 
 	h5 {
 		@apply text-base;
+		@apply leading-normal;
 	}
 
 	p {
-		@apply text-base;
+		@apply leading-relaxed;
 	}
 
 	a {
-		@apply text-base;
 	}
 
 	.margins {
 		@apply mx-6;
-		@apply xl:mx-[unset];
+		@apply xl:mx-auto;
+	}
+
+	nav .current {
+		/* @apply text-blue; */
+		@apply font-semibold;
 	}
 }
 
@@ -63,7 +75,7 @@
 		@apply bg-slate-900;
 		@apply backdrop-brightness-50;
 	}
-	.hero-sec::after {
+	.hero-sec::before {
 		content: "";
 		@apply absolute;
 		@apply inset-0;
@@ -80,11 +92,12 @@
 		@apply overscroll-x-contain;
 		@apply scroll-smooth;
 		@apply w-full;
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
+		touch-action: pan-x;
+		-ms-overflow-style: none !important; /* IE and Edge */
+		scrollbar-width: none !important; /* Firefox */
 	}
 	.slider::-webkit-scrollbar {
-		@apply lg:hidden;
+		@apply lg:hidden !important;
 	}
 	.card {
 		@apply border;
