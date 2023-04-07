@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.html",
-	"author": "",
+	"author": "Nazar Popławski",
 	"license": "ISC",
 	"scripts": {
 		"dev": "astro dev",
@@ -14,12 +14,13 @@
 	},
 	"dependencies": {
 		"@astrojs/tailwind": "^3.1.1",
-		"astro": "^2.1.9"
+		"astro": "^2.1.9",
+		"tailwindcss-intersect": "^1.0.4"
 	},
 	"devDependencies": {
 		"prettier": "^2.8.7",
 		"prettier-plugin-astro": "^0.8.0",
-		"prettier-plugin-tailwindcss": "^0.2.5",
+		"prettier-plugin-tailwindcss": "^0.2.7",
 		"tailwindcss": "^3.3.1"
 	}
 }

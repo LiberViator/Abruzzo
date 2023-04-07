@@ -45,6 +45,10 @@
 	a {
 	}
 
+	strong {
+		@apply !font-semibold;
+	}
+
 	.margins {
 		@apply mx-6;
 		@apply xl:mx-auto;
