@@ -1,5 +1,5 @@
 ---
-const { icon, title, desc, price } = Astro.props;
+const { icon, title, desc, price, cta } = Astro.props;
 ---
 
 <div
@@ -19,10 +19,13 @@ const { icon, title, desc, price } = Astro.props;
 		<span class="text-right font-semibold">{price}</span>
 		<span class="text-right text-sm">netto/rok</span>
 	</div>
-
-	<a
-		class="flex h-14 w-full flex-row items-center justify-center gap-2 bg-blue font-semibold text-white transition-colors hover:bg-yellow hover:text-black"
-		href="https://abruzzo.com.pl/oprogramowanie/">
-		Więcej o produkcie
-	</a>
+	{
+		cta ? (
+			<a
+				class="bg-blue hover:bg-yellow flex h-14 w-full flex-row items-center justify-center gap-2 font-semibold text-white transition-colors hover:text-black"
+				href="https://abruzzo.com.pl/oprogramowanie/">
+				Więcej o produkcie
+			</a>
+		) : undefined
+	}
 </div>

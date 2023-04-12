@@ -16,9 +16,6 @@ module.exports = {
 				yellow: "#FBBC15",
 				red: "#E94337",
 			},
-			backgroundImage: {
-				hero: "url('/assets/images/hero.jpg')",
-			},
 		},
 	},
 	plugins: [],

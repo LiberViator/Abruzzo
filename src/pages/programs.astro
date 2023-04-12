@@ -2,8 +2,7 @@
 import "/src/main.css";
 
 import Header from "../layouts/Header.astro";
-import PageHeader from "../layouts/PageHeader.astro";
-import AboutCoop from "../layouts/AboutCoop.astro";
+import Shop from "../layouts/Shop.astro";
 import Footer from "../layouts/Footer.astro";
 ---
 
@@ -13,8 +12,9 @@ import Footer from "../layouts/Footer.astro";
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Comarch | Abruzzo IG - Abruzzo</title>
-		<!-- Styles -->
+		<title>
+			Oprogramowanie szyte na miarę | Abruzzo Internet Group - Abruzzo
+		</title>
 		<!-- <link rel="stylesheet" href="/src/main.css" /> -->
 		<!-- Material Icons -->
 		<link
@@ -26,8 +26,9 @@ import Footer from "../layouts/Footer.astro";
 
 	<body class="overflow-x-hidden">
 		<Header />
-		<PageHeader />
-		<AboutCoop />
+		<main>
+			<Shop />
+		</main>
 		<Footer />
 	</body>
 </html>
