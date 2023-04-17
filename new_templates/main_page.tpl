@@ -3,7 +3,7 @@
 		class="hero-sec relative h-[720px] overflow-hidden bg-neutral-100 py-14 text-white">
 		<div class="m-auto flex h-full w-full max-w-4xl flex-col justify-center">
 			<div>
-				<div class="margins mb-14 flex flex-col items-center text-center">
+				<div class="paddings mb-14 flex flex-col items-center text-center">
 					<h1 class="mb-6 text-xl sm:text-2xl">
 						OPROGRAMOWANIE SZYTE NA MIARĘ
 					</h1>
@@ -14,7 +14,7 @@
 					</h2>
 				</div>
 
-				<div class="margins flex flex-wrap justify-center gap-x-8 gap-y-4">
+				<div class="paddings flex flex-wrap justify-center gap-x-8 gap-y-4">
 					<a class="cta bg-yellow text-black hover:bg-[#fde047]" href="#oferta"
 						>Zobacz ofertę</a
 					>
@@ -30,12 +30,12 @@
 
 	<section class="py-12">
 		<div class="mx-auto w-full max-w-4xl flex-col">
-			<h2 class="margins mb-8 text-center text-[24px] uppercase tracking-wide">
+			<h2 class="paddings mb-8 text-center text-[24px] uppercase tracking-wide">
 				Czym się zajmujemy
 			</h2>
 
 			<div
-				class="margins flex flex-col items-center justify-center gap-8 md:flex-row">
+				class="paddings flex flex-col items-center justify-center gap-8 md:flex-row">
 				<div class="flex-[3]">
 					<p class="max-w-[620px]">
 						Realizujemy projekty w sposób przejrzysty, stosując nieszablonowe
@@ -75,11 +75,12 @@
 
 	<section class="bg-zinc-100 py-12" id="oferta">
 		<div class="mx-auto flex w-full max-w-4xl flex-col items-center">
-			<h2 class="margins mb-8 text-center text-[24px] uppercase tracking-wide">
+			<h2 class="paddings mb-8 text-center text-[24px] uppercase tracking-wide">
 				Nasza oferta
 			</h2>
 
-			<div class="margins grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+			<div
+				class="paddings grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
 				<div
 					class="flex min-w-[224px] max-w-[300px] flex-[1_1_224px] flex-col border bg-white pt-8">
 					<div class="flex justify-center">
@@ -172,12 +173,12 @@
 
 	<section class="py-12">
 		<div class="mx-auto w-full max-w-4xl flex-col">
-			<h2 class="margins mb-8 text-center text-[24px] uppercase tracking-wide">
+			<h2 class="paddings mb-8 text-center text-[24px] uppercase tracking-wide">
 				Współpraca z Comarch
 			</h2>
 
 			<div
-				class="margins flex flex-col items-center justify-center gap-8 md:flex-row">
+				class="paddings flex flex-col items-center justify-center gap-8 md:flex-row">
 				<div class="flex-[3] md:order-1">
 					<p class="mb-4 max-w-lg">
 						Współpracujemy z najlepszymi producentami oprogramowania,
@@ -203,12 +204,12 @@
 
 	<section class="overflow-hidden bg-zinc-100 py-12" id="produkty">
 		<div class="mx-auto flex w-full max-w-4xl flex-col items-center">
-			<h2 class="margins mb-8 text-center text-[24px] uppercase tracking-wide">
+			<h2 class="paddings mb-8 text-center text-[24px] uppercase tracking-wide">
 				Nasze produkty
 			</h2>
 
 			<div class="slider relative mb-8 flex">
-				<div class="margins flex gap-8 xl:m-auto">
+				<div class="paddings flex gap-8 xl:m-auto">
 					<div
 						class="flex min-h-[420px] min-w-[256px] max-w-[300px] flex-1 snap-center snap-always flex-col border bg-white pt-8">
 						<div class="mx-6 flex justify-center">
@@ -316,11 +317,11 @@
 
 	<section class="py-12">
 		<div class="mx-auto flex w-full max-w-4xl flex-col items-center">
-			<h2 class="margins mb-8 text-center text-[24px] uppercase tracking-wide">
+			<h2 class="paddings mb-8 text-center text-[24px] uppercase tracking-wide">
 				Zaufali nam
 			</h2>
 
-			<div class="margins flex flex-wrap justify-center gap-8">
+			<div class="paddings flex flex-wrap justify-center gap-8">
 				<a href="https://elzap.eu/"
 					><img
 						alt="Zaufany partner"

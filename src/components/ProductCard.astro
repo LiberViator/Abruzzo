@@ -3,14 +3,14 @@ const { icon, title, desc, price, cta } = Astro.props;
 ---
 
 <div
-	class="flex min-h-[420px] min-w-[256px] max-w-[300px] flex-1 snap-center snap-always flex-col border bg-white pt-8">
+	class="embla__slide flex min-w-[0%] max-w-[300px] flex-[0_0_100%] flex-col border bg-white pt-8 md:flex-1">
 	<div class="mx-6 flex justify-center">
 		<img class="mb-8" width="80" width="80" src={icon} alt="illustration" />
 	</div>
 
 	<div class="mx-6 mb-4 flex flex-grow flex-col">
 		<h4 class="mb-4 text-center font-semibold">{title}</h4>
-		<p class="line-clamp-3 text-center text-base">
+		<p class="line-clamp-4 text-center text-base">
 			{desc}
 		</p>
 	</div>

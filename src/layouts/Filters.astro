@@ -1,0 +1,93 @@
+---
+---
+
+<div class="overflow-hidden bg-zinc-100 py-4">
+	<header
+		class="paddings mx-auto mb-6 flex w-full items-center justify-between sm:hidden">
+		<a
+			class="text-red"
+			href="{$smarty.const.BASE_URL}{$smarty.get.page}/"
+			title="wyczyść">Wyczyść filtry</a
+		>
+		<button
+			onclick="document.getElementById('filters').style.display === 'none' ? filters.style.display = 'flex' : filters.style.display = 'none'"
+			type="button"
+			class="flex items-center gap-2"
+			aria-expanded="false">
+			<span class="">Konfiguruj</span>
+			<span class="material-symbols-outlined text-[24px]">tune</span>
+		</button>
+	</header>
+	<form
+		id="filters"
+		style="display: none;"
+		class="paddings mx-auto max-w-4xl flex-col sm:!flex">
+		<fieldset class="mb-4 flex flex-col gap-3 sm:flex-row">
+			<div class="flex w-full flex-col">
+				<label class="mb-2">Szukaj wg kategorii</label>
+				<select name="ord[alphabetical]">
+					<option value="">Wybierz</option>
+					<!-- {html_checkboxes2 name="tags" options=$arrTags selected=$smarty.get.tags wrapper="li"} -->
+				</select>
+				<ul class="hidden">
+					<li>
+						<a href="#" data-toggle="dropdown-check-all">Zaznasz wszystkie</a>
+					</li>
+				</ul>
+			</div>
+			<div class="flex w-full flex-col">
+				<label class="mb-2">Widełki cenowe</label>
+				<div class="flex gap-3">
+					<input
+						class="h-12 w-full border px-6 text-base"
+						type="text"
+						name="price_from"
+						placeholder="Cena od"
+						value="{$smarty.get.price_from}"
+					/>
+					<input
+						class="h-12 w-full border px-6 text-base"
+						type="text"
+						name="price_to"
+						placeholder="Cena do"
+					/>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset class="mb-8 flex flex-col gap-3 sm:flex-row">
+			<div class="flex w-full flex-col">
+				<label class="mb-2">Alfabetycznie</label>
+				<select class="form-field" name="ord[alphabetical]">
+					<option value="">Wybierz</option>
+					<!-- {html_options options=$arrAscDesc selected=$smarty.get.ord.alphabetical} -->
+				</select>
+			</div>
+			<div class="flex w-full flex-col">
+				<label class="mb-2">Cena</label>
+				<select class="form-field" name="ord[price]">
+					<option value="">Wybierz</option>
+					<!-- {html_options options=$arrAscDesc selected=$smarty.get.ord.price} -->
+				</select>
+			</div>
+			<div class="flex w-full flex-col">
+				<label class="mb-2">Popularność</label>
+				<select class="form-field" name="ord[popularity]">
+					<option value="">Wybierz</option>
+					<!-- {html_options options=$arrAscDesc selected=$smarty.get.ord.popularity} -->
+				</select>
+			</div>
+		</fieldset>
+		<div class="flex flex-wrap items-end justify-end gap-4">
+			<a
+				class="flex h-12 flex-[1_1_200px] items-center justify-center border border-red text-center font-semibold text-red hover:bg-red hover:text-white sm:max-w-[256px]"
+				href="{$smarty.const.BASE_URL}{$smarty.get.page}/"
+				title="wyczyść">Wyczyść filtry</a
+			>
+			<button
+				class="flex h-12 flex-[1_1_200px] items-center justify-center bg-blue text-center font-semibold text-white sm:max-w-[256px]"
+				name="search"
+				type="submit">Wyszukaj</button
+			>
+		</div>
+	</form>
+</div>

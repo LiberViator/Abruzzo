@@ -6,8 +6,9 @@ import ProductCard from "../components/ProductCard.astro";
 <section id="produkty" class="overflow-hidden bg-zinc-100 py-12">
 	<div class="mx-auto flex w-full max-w-4xl flex-col items-center">
 		<Title title="Nasze produkty" />
-		<div class="slider relative mb-8 flex">
-			<div class="margins flex gap-8 xl:m-auto">
+
+		<div class="paddings embla mb-8 w-full overflow-hidden">
+			<div class="embla__container flex gap-8">
 				<ProductCard
 					icon="/assets/images/gear.svg"
 					title="Comarch ERP Optima Płace i Kadry"
@@ -37,4 +38,5 @@ import ProductCard from "../components/ProductCard.astro";
 			href="https://abruzzo.com.pl/oprogramowanie/">Zobacz wszyskie produkty</a
 		>
 	</div>
+	<script src="../scripts/slider.js"></script>
 </section>
