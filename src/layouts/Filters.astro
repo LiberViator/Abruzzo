@@ -25,28 +25,27 @@
 		<fieldset class="mb-4 flex flex-col gap-3 sm:flex-row">
 			<div class="relative flex w-full flex-col">
 				<label class="mb-2">Szukaj wg kategorii</label>
-				<select name="ord[alphabetical]">
-					<option value="">Wybierz</option>
-					<!-- {html_checkboxes2 name="tags" options=$arrTags selected=$smarty.get.tags wrapper="li"} -->
-				</select>
+				<div class="select"></div>
 				<ul id="categoryList" class="absolute top-48 h-16 w-full bg-red">
 					<li>
 						<a href="#" data-toggle="dropdown-check-all">Zaznasz wszystkie</a>
 					</li>
+					<!-- {html_checkboxes2 name="tags" options=$arrTags
+					selected=$smarty.get.tags wrapper="li"} -->
 				</ul>
 			</div>
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Widełki cenowe</label>
 				<div class="flex gap-3">
 					<input
-						class="h-12 w-full border px-6 text-base"
+						class="select"
 						type="text"
 						name="price_from"
 						placeholder="Cena od"
 						value="{$smarty.get.price_from}"
 					/>
 					<input
-						class="h-12 w-full border px-6 text-base"
+						class="select"
 						type="text"
 						name="price_to"
 						placeholder="Cena do"
@@ -57,21 +56,21 @@
 		<fieldset class="mb-8 flex flex-col gap-3 sm:flex-row">
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Alfabetycznie</label>
-				<select class="form-field" name="ord[alphabetical]">
+				<select class="select" name="ord[alphabetical]">
 					<option value="">Wybierz</option>
 					<!-- {html_options options=$arrAscDesc selected=$smarty.get.ord.alphabetical} -->
 				</select>
 			</div>
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Cena</label>
-				<select class="form-field" name="ord[price]">
+				<select class="select" name="ord[price]">
 					<option value="">Wybierz</option>
 					<!-- {html_options options=$arrAscDesc selected=$smarty.get.ord.price} -->
 				</select>
 			</div>
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Popularność</label>
-				<select class="form-field" name="ord[popularity]">
+				<select class="select" name="ord[popularity]">
 					<option value="">Wybierz</option>
 					<!-- {html_options options=$arrAscDesc selected=$smarty.get.ord.popularity} -->
 				</select>

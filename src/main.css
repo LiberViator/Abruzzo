@@ -84,14 +84,16 @@
 		@apply px-6;
 		@apply text-base;
 	}
-	select {
+	.select {
 		-moz-appearance: none; /* Firefox */
 		-webkit-appearance: none; /* Safari and Chrome */
 		appearance: none;
+		@apply bg-white;
 		@apply border;
 		@apply px-6;
 		@apply text-base;
 		@apply h-12;
+		@apply flex-shrink;
 		background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
 		background-repeat: no-repeat;
 		background-position-x: calc(100% - 8px);
