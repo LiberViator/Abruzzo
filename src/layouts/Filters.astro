@@ -1,14 +1,9 @@
 ---
 ---
 
-<div class="overflow-hidden bg-zinc-100 py-4">
+<div class="bg-zinc-100 py-4">
 	<header
 		class="paddings mx-auto mb-6 flex w-full items-center justify-between sm:hidden">
-		<a
-			class="text-red"
-			href="{$smarty.const.BASE_URL}{$smarty.get.page}/"
-			title="wyczyść">Wyczyść filtry</a
-		>
 		<button
 			onclick="document.getElementById('filters').style.display === 'none' ? filters.style.display = 'flex' : filters.style.display = 'none'"
 			type="button"
@@ -17,65 +12,85 @@
 			<span class="">Konfiguruj</span>
 			<span class="material-symbols-outlined text-[24px]">tune</span>
 		</button>
+		<a
+			class="text-red"
+			href="{$smarty.const.BASE_URL}{$smarty.get.page}/"
+			title="wyczyść">Wyczyść filtry</a
+		>
 	</header>
 	<form
 		id="filters"
 		style="display: none;"
 		class="paddings mx-auto max-w-4xl flex-col sm:!flex">
-		<fieldset class="mb-4 flex flex-col gap-3 sm:flex-row">
-			<div class="relative flex w-full flex-col">
-				<label class="mb-2">Szukaj wg kategorii</label>
-				<div class="select"></div>
-				<ul id="categoryList" class="absolute top-48 h-16 w-full bg-red">
-					<li>
-						<a href="#" data-toggle="dropdown-check-all">Zaznasz wszystkie</a>
-					</li>
-					<!-- {html_checkboxes2 name="tags" options=$arrTags
-					selected=$smarty.get.tags wrapper="li"} -->
-				</ul>
+		<div class="mb-4 flex flex-col gap-3 sm:flex-row">
+			<div class="flex w-full flex-col">
+				<label class="label mb-2">Szukaj wg kategorii</label>
+				<div class="field">
+					<div id="checkbox-list" class="relative flex w-full flex-col">
+						<div
+							class="select input label flex items-center"
+							tabindex="100"
+							onclick="document.getElementById('categoryList').style.display === 'none' ? categoryList.style.display = 'flex' : categoryList.style.display = 'none'">
+							Wybierz
+						</div>
+						<ul
+							id="categoryList"
+							class="items input absolute top-12 flex max-h-64 w-full flex-col gap-4 overflow-y-scroll border-t-0 py-4 shadow-lg"
+							style="display: none">
+							<li>
+								<a href="#" data-toggle="dropdown-check-all"
+									>Zaznasz wszystkie</a
+								>
+							</li>
+							<!-- {html_checkboxes2 name="tags" options=$arrTags
+							selected=$smarty.get.tags wrapper="li"} -->
+						</ul>
+					</div>
+				</div>
 			</div>
+
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Widełki cenowe</label>
 				<div class="flex gap-3">
 					<input
-						class="select"
+						class="input w-full"
 						type="text"
 						name="price_from"
 						placeholder="Cena od"
 						value="{$smarty.get.price_from}"
 					/>
 					<input
-						class="select"
+						class="input w-full"
 						type="text"
 						name="price_to"
 						placeholder="Cena do"
 					/>
 				</div>
 			</div>
-		</fieldset>
-		<fieldset class="mb-8 flex flex-col gap-3 sm:flex-row">
+		</div>
+		<div class="mb-8 flex flex-col gap-3 sm:flex-row">
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Alfabetycznie</label>
-				<select class="select" name="ord[alphabetical]">
+				<select class="select input" name="ord[alphabetical]">
 					<option value="">Wybierz</option>
 					<!-- {html_options options=$arrAscDesc selected=$smarty.get.ord.alphabetical} -->
 				</select>
 			</div>
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Cena</label>
-				<select class="select" name="ord[price]">
+				<select class="select input" name="ord[price]">
 					<option value="">Wybierz</option>
 					<!-- {html_options options=$arrAscDesc selected=$smarty.get.ord.price} -->
 				</select>
 			</div>
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Popularność</label>
-				<select class="select" name="ord[popularity]">
+				<select class="select input" name="ord[popularity]">
 					<option value="">Wybierz</option>
 					<!-- {html_options options=$arrAscDesc selected=$smarty.get.ord.popularity} -->
 				</select>
 			</div>
-		</fieldset>
+		</div>
 		<div class="flex flex-wrap items-end justify-end gap-4">
 			<a
 				class="flex h-12 flex-[1_1_200px] items-center justify-center border border-red text-center font-semibold text-red hover:bg-red hover:text-white sm:max-w-[256px]"

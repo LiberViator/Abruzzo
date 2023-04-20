@@ -1,0 +1,51 @@
+---
+const { name, price, desc } = Astro.params;
+---
+
+<main class="py-12">
+	<section
+		class="paddings mx-auto mb-12 flex max-w-4xl flex-col gap-x-8 gap-y-4 sm:flex-row">
+		<div class="h-auto max-h-72 w-full flex-[5] overflow-hidden rounded">
+			<img
+				src="/assets/images/comarch.png"
+				alt="illustration"
+				class="h-full w-full bg-slate-50 object-contain"
+			/>
+		</div>
+
+		<div class="flex w-full flex-[3] flex-col">
+			<h3 class="mb-3 font-semibold">Comarch ERP Optima Płace i Kadry</h3>
+			<div class="mb-4 flex flex-col">
+				<span>Cena regularna:</span>
+				<span class="font-semibold">1625.00 zł</span>
+				<span class="text-sm">netto/rok</span>
+			</div>
+			<span class="h-full"></span>
+			<button
+				type="button"
+				class="flex h-12 w-full flex-shrink-0 items-center justify-center border border-blue text-center font-semibold text-blue hover:bg-blue hover:text-white"
+				data-toggle="modal"
+				data-target="#modal-form">
+				Zadaj pytanie
+			</button>
+		</div>
+	</section>
+	<section class="paddings mx-auto max-w-4xl">
+		<p>
+			IBARD to sprawdzone przez tysiące klientów bezpieczne rozwiązanie, które
+			zabezpieczy systemy ERP przed utratą danych. Produkt ten jest dedykowany
+			klientom Comarch, którzy w kilku prostych krokach mogą skonfigurować
+			automatyczną kopię bezpieczeństwa swoich baz. Comarch IBARD ERP Backup
+			10GB oferuje: backup nielimitowanej ilości baz danych backup plików i
+			folderów harmonogram zadań backupu dostęp przez www, aplikację dekstopową
+			oraz mobilną (Android, iOS) własny klucz szyfrujący szyfrowanie transmisji
+			danych wersjonowanie plików (do 20 wersji wstecz) synchronizację danych
+			zaawansowane udostępnianie powiadomienia email o statusie backupu backup
+			lokalizacji sieciowych IBARD cieszy się zaufaniem zarówno małych, średnich
+			jak i dużych firm w całej Europie, które poszukują bezpiecznego systemu do
+			backupu, przechowywania i udostępniania danych. Oferujemy również chmury
+			dedykowane biznesowi, niezwiązanemu z oprogramowaniem Comarch. O
+			różnorodności chmur oraz ich możliwości przeczytasz na naszym blogu.
+		</p>
+	</section>
+</main>
