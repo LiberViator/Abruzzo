@@ -10,7 +10,7 @@ import Footer from "../layouts/Footer.astro";
 <Layout>
 	<Header />
 	<PageHeader />
-	<main>
+	<main class="py-12">
 		<article
 			class="paddings mx-auto flex max-w-4xl flex-col gap-x-8 gap-y-4 md:flex-row">
 			<div class="max-h-72 flex-[2] overflow-hidden bg-slate-50 md:max-w-sm">
@@ -21,14 +21,14 @@ import Footer from "../layouts/Footer.astro";
 				/>
 			</div>
 			<div class="flex-[3]">
-				<h3 class="mb-1 font-semibold">
+				<h3 class="mb-1 text-xl uppercase">
 					<a
 						href="{$smarty.const.BASE_URL}{$page_name}/show/{$article.furl}/"
 						title="{$article.title}">
 						Jak zdefiniować własne wydruki seryjne?
 					</a>
 				</h3>
-				<p class="mb-4 text-sm text-zinc-400">
+				<p class="mb-4 text-base text-zinc-400">
 					Michał Słowik, poniedziałek, 30 maja 2022 10:45
 				</p>
 				<p class="text-base">
