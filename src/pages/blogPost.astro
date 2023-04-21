@@ -12,7 +12,7 @@ import Footer from "../layouts/Footer.astro";
 	<PageHeader />
 	<main>
 		<article class="py-12">
-			<div class="mb-8">
+			<div class="paddings mb-8">
 				<h3 class="mb-1 text-center text-xl uppercase">
 					Jak zdefiniować własne wydruki seryjne?
 				</h3>
@@ -26,7 +26,7 @@ import Footer from "../layouts/Footer.astro";
 					href="{$smarty.const.BASE_URL}upload/{$article.filename}"
 					title="{$article.title}"
 					><img
-						class="mb-2 h-[320px] w-full rounded object-cover"
+						class="mb-2 aspect-[3/2] max-h-96 w-full rounded-xl object-cover"
 						src="/assets/images/ibard.png"
 						alt="{$article.title}"
 					/></a

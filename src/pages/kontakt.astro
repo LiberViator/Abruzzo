@@ -1,0 +1,114 @@
+---
+import "/src/main.css";
+
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../layouts/PageHeader.astro";
+import Header from "../layouts/Header.astro";
+import ProductProfile from "../layouts/ProductProfile.astro";
+import Footer from "../layouts/Footer.astro";
+---
+
+<Layout>
+	<Header />
+	<PageHeader />
+	<main>
+		<form action="">
+			<fieldset>
+				<input type="text" name="name" /><input type="email" name="email" />
+			</fieldset>
+			<fieldset>
+				<input type="text" name="subject" />
+				<textarea name="message" id="" cols="30" rows="10"></textarea>
+			</fieldset>
+			<div>
+				<input
+					id="agreement"
+					type="checkbox"
+					name="agreement"
+					value="true"
+					data-required=""
+					class="field-error"
+				/>
+				<label for="agreement"
+					>Oświadczam, że zapoznałem się z <a href="#">Polityką prywatności</a> i
+					akceptuję jej postanowienia. Moje dane osobowe, wskazane w formularzu,
+					będą przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie.</label
+				>
+			</div>
+		</form>
+	</main>
+	<Footer />
+</Layout>
+
+<!-- 
+{if $_CFG.contact_form_on == 1}
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-wrapper">
+                <h3>{$_CFG.contact_form_desc}</h3>
+                <form id="form-contact" action="{$smarty.const.BASE_URL}/bat/ajaxContactForm.php" method="post">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="field">
+                                <input class="form-field" type="text" name="name" placeholder="Imię i Nazwisko*" data-required/>
+                                <span class="error-msg">Pole wymagane*</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="field">
+                                <input class="form-field" type="text" name="email" placeholder="Adres e-mail*" data-describedby="email" data-description="email" data-validate="email" />
+                                <span id="email" class="error-msg">Pole wymagane*</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="field">
+                                <input class="form-field" type="text" name="subject" placeholder="Temat"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="field">
+                                <textarea class="form-field" name="message" rows="6" placeholder="Treść*" data-required></textarea>
+                                <span class="error-msg">Pole wymagane*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="field">
+                                <input id="agreement" type="checkbox" name="agreement" value="true" data-required="" class="field-error">
+                                <span class="error-msg">Pole wymagane*</span>
+                                <label for="agreement">Oświadczam, iż zapoznałem się z <a href="#" title="">Polityką prywatności</a> oraz akceptuję jej postanowienia. Moje dane osobowe wskazane w formularzu będą przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie.</label>
+                            </div>
+                        </div>
+                    </div>                    
+                    {if $show_captcha}
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <div id="captcha"></div>
+                                    </div>
+                                    <div class="clear"></div><br/>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <div class="field" style="width: 162px;">
+                                            <input class="form-field" type="text" name="captcha_code" placeholder="Kod z obrazka*" data-required/>
+                                            <span class="error-msg">Pole wymagane*</span>
+                                        </div>							
+                                    </div>                        
+                                </div>
+                            </div>
+                        </div>                
+                    {/if}
+                    <div class="form-buttons">
+                        <button class="btn-normal btn-form" type="submit" name="send"><span>Wyślij</span></button>
+                        <span class="pull-right">* Pola z gwiazdką są wymagane!</span>
+                    </div>
+                </form>
+            </div>
+        </div>			
+    </div>
+    <div class="solidline"></div>
+{/if} 
+-->
