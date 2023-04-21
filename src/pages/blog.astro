@@ -1,0 +1,47 @@
+---
+import "/src/main.css";
+
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../layouts/PageHeader.astro";
+import Header from "../layouts/Header.astro";
+import Footer from "../layouts/Footer.astro";
+---
+
+<Layout>
+	<Header />
+	<PageHeader />
+	<main>
+		<article
+			class="paddings mx-auto flex max-w-4xl flex-col gap-x-8 gap-y-4 md:flex-row">
+			<div class="max-h-72 flex-[2] overflow-hidden bg-slate-50 md:max-w-sm">
+				<img
+					class="h-full w-full object-cover object-center"
+					src="/assets/images/ibard.png"
+					alt="{$article.title}"
+				/>
+			</div>
+			<div class="flex-[3]">
+				<h3 class="mb-1 font-semibold">
+					<a
+						href="{$smarty.const.BASE_URL}{$page_name}/show/{$article.furl}/"
+						title="{$article.title}">
+						Jak zdefiniować własne wydruki seryjne?
+					</a>
+				</h3>
+				<p class="mb-4 text-sm text-zinc-400">
+					Michał Słowik, poniedziałek, 30 maja 2022 10:45
+				</p>
+				<p class="text-base">
+					Wiele firm podczas pracy z Comarch OPTIMA, korzysta z
+					zindywidualizowanych wzorów wydruków opracowanych przez swoich
+					administratorów. Chociaż wzory dokumentów księgowych, takich jak
+					faktury, są określone w rozporządzeniu Ministerstwa Finansów, to
+					jednak pozostaje pole manewru dla firm mających naturalną potrzebę
+					wyróżnienia się. Oprogramowanie pozwala na wskazanie własnych wzorów
+					dla operacji seryjnych, wymaga to jednak nieco głębszych modyfikacji.
+				</p>
+			</div>
+		</article>
+	</main>
+	<Footer />
+</Layout>

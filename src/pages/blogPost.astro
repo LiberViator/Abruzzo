@@ -1,0 +1,117 @@
+---
+import "/src/main.css";
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../layouts/PageHeader.astro";
+import Header from "../layouts/Header.astro";
+import ProductProfile from "../layouts/ProductProfile.astro";
+import Footer from "../layouts/Footer.astro";
+---
+
+<Layout>
+	<Header />
+	<PageHeader />
+	<main>
+		<div class="">
+			<div class="paddings mx-auto mb-4 max-w-4xl">
+				<a
+					class=""
+					href="{$smarty.const.BASE_URL}upload/{$article.filename}"
+					title="{$article.title}"
+					><img
+						class="h-[320px] w-full rounded object-cover"
+						src="/assets/images/ibard.png"
+						alt="{$article.title}"
+					/></a
+				>
+			</div>
+			<div class="paddings mx-auto max-w-4xl">
+				<article>
+					<h3 class="mb-1 font-semibold">
+						Jak zdefiniować własne wydruki seryjne?
+					</h3>
+					<p class="mb-4 text-sm text-zinc-400">
+						Michał Słowik, poniedziałek, 30 maja 2022 10:45
+					</p>
+					<p class="text-base">
+						Przestrzeń danych w chmurze to rozwiązanie, które z roku na rok
+						cieszy się coraz większą popularnością. Jest to jedna z tych
+						niewielkich inwestycji, nad której opłacalnością nie trzeba się
+						długo zastanawiać. Decydując się na korzystanie z chmury, w sposób
+						błyskawiczny uzyskujemy dostęp z dowolnego miejsca na ziemi do
+						prywatnej przestrzeni. Z łatwością możemy dzielić się danymi z
+						innymi, przesyłając link do projektu, zdjęć czy portfolio. Niskim
+						kosztem finansowym i niemal zerowym kosztem czasu otrzymujemy dostęp
+						do usług, których uruchomienie w tradycyjny sposób wymagałyby
+						sporego angażu. Zakup fizycznych serwerów ich konfiguracja oraz
+						zapewnienie bezpieczeństwa nowej infrastrukturze to tylko część
+						pracy jaka czeka nas, jeśli nie zdecydujemy się na rozwiązania
+						chmurowe. Chmura, chmurze nierówna Usługi przechowywania danych w
+						chmurze zasadniczo różnią się od siebie. Większość z nas spotkała
+						się z popularnymi dostawcami aplikacji, takich jak: Google Drive,
+						iCloud, One Drive, IBARD czy Drobox. Dla części z nas miarą
+						porównania ich, oprócz ceny jest oczywiście wielkość mierzona w giga
+						- lub tera-bajtach. W przypadku zastosowań na swój osobisty,
+						niekomercyjny użytek nie ma w takim rozeznaniu nic złego.
+						Przeciwnie, jeśli chcemy zagwarantować bezpieczeństwo danym
+						biznesowym. W tym miejscu samoistnie wplata się słowo backup, które
+						w ostatnich latach stanowi udany mariaż z chmurą. Najbardziej
+						zasadniczą opcją w przypadku chmur biznesowych jest liczba
+						użytkowników, która będzie mogłą z niej korzystać. Korzystając z
+						chmury prywatnej, najprawdopodobniej będziesz korzystał z niej tylko
+						Ty - lub podzielisz się loginem i hasłem z zaufaną Ci osobą. Takie
+						rozwiązanie nie sprawdzi się jednak w Twojej firmie. Tutaj każdy
+						pracownik będzie musiał otrzymać indywidualne loginy, a często też
+						różne uprawnienia. Za pewne nie chciałbyś, aby przez przypadek
+						niefrasobliwy pracownik usunął projekt, nad którym pracował cały
+						zespół. Kolejną funkcją, której nie powinno zabraknąć, jest
+						wersjonowanie danych. Załóżmy, że w Twojej firmie wielu pracowników
+						pracuje na jednym systemie, np. księgowym, wprowadzając i
+						aktualizujac dane codziennie. Dochodzi jednak do omyłki, w wyniku
+						której część danych została nieprawidłowo zaktualizowana. Możemy
+						również założyć, że część danych została omyłkowo usunięta przez
+						nieroztropnego pracownika, który jest na etapie wdrażania się. O
+						fakcie tym, dowiadujesz się na drugi dzień. Międzyczasie, załóżmy w
+						nocy - usługa kopii zapasowej w chmurze wykonała backup bazy tego
+						programu. Pomimo, że kopia danych jest bezpieczna, to jest ona
+						zupełnie nieprzydatna. Przywracając ją nie odwrócić skutków nieuwagi
+						swojego pracownika. Chmura danych musi więc posiadać opcje
+						wersjonowania danych (najlepiej bez limitu), dzięki której będziesz
+						mógł wybrać, którą kopie chcesz przywrócić. Linkowanie to z kolei
+						opcja, która stanowi klucz do wygodnego użytkownia. Korzystając z
+						firmowej chmury, może pojawić się konieczność, w której będziesz
+						musiał podzielić się danymi ze swoimi klientami. Z pewnością nie
+						chciałbyś udostępniać im danych logowania, a jedynie przesłać
+						unikalny link, usprawniając wymianę danych i oszczędzając czas.
+						Dostęp z różnych urządzeń i miejsc wydaje się być fundamentalną
+						możliwość oferowaną przez chmury. Tu mogą również pojawić się pewne
+						ograniczenia. Nie każdy usługodawca zaoferuje jednocześnie dostęp
+						przez aplikację mobilną (Android, iOS), aplikację dekstopową
+						(działającą na różnych systemach operacyjnych) oraz klasyczny dostęp
+						przez przeglądarkę internetową. Pozostała funkcjonalność stanowi z
+						reguły filar możliwości dzisiejszych chmur. Należą do nich
+						harmonogramy zadań, szyfrowanie danych oraz szyfrowanie transmisji,
+						czy powiadomienia email o statusie synchronizacji. Twoja chmura ich
+						nie posiada? Warto ponownie przeanalizować rynek. W końcu jedną z
+						największych zalet chmur jest ich skalowalność i elastyczność. W
+						każdej chwili możemy poprosić usługodawcę o rozszerzenie naszej
+						przestrzeni, zwiększenie przepustowości lub też zrezygnować z usług.
+						Coś dla zaawansowanych Opisane powyżej możliwości mogą nie być
+						wystarczające dla specjalistów (administratorów sieci czy
+						programistów) mających bardziej zaawansowane potrzeby. Jedną z
+						najcześcięj poszukiwanych przez administratorów sieci firmowych
+						opcji są kopie lokalizacji sieciowych. Specjaliści od bezpieczeństwa
+						szukają z kolei możliwości szyfrowania własnymi kluczami oraz
+						zapytają o fizyczną lokalizacją chmury. Lepsze data center w Polsce
+						czy za granicą? Jak wskazują badania opinii publicznych, większe
+						zaufanie mamy do rodzimych usługodawców... Projektując systemy
+						komputerowe programiści zapytają z kolei o możliwość integracji z
+						chmurą przez interfejs programowania (API). Rozwiązania te, chociaż
+						rzadziej poszukiwane, w niektórych przypadkach mogą okazać się
+						kluczowe, zawężając tym samym możliwości wyboru.
+					</p>
+				</article>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>
