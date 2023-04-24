@@ -4,6 +4,7 @@ import "/src/main.css";
 import Layout from "../layouts/Layout.astro";
 import PageHeader from "../layouts/PageHeader.astro";
 import Header from "../layouts/Header.astro";
+import Title from "../components/Title.astro";
 import ProductProfile from "../layouts/ProductProfile.astro";
 import Footer from "../layouts/Footer.astro";
 ---
@@ -11,16 +12,35 @@ import Footer from "../layouts/Footer.astro";
 <Layout>
 	<Header />
 	<PageHeader />
-	<main>
-		<form action="">
-			<fieldset>
-				<input type="text" name="name" /><input type="email" name="email" />
-			</fieldset>
-			<fieldset>
-				<input type="text" name="subject" />
-				<textarea name="message" id="" cols="30" rows="10"></textarea>
-			</fieldset>
-			<div>
+	<main class="paddings bg-zinc-100 py-12">
+		<Title title="Formularz kontaktowy" />
+		<form action="" class="mx-auto flex max-w-xl flex-col flex-wrap">
+			<div class="mb-4 flex flex-col gap-4 sm:flex-row">
+				<div class="flex w-full flex-col gap-2">
+					<label for="name">Imię i Nazwisko*</label>
+					<input type="text" name="name" class="input w-full" required />
+				</div>
+				<div class="flex w-full flex-col gap-2">
+					<label for="email">Adres E-mail*</label>
+					<input type="email" name="email" class="input w-full" required />
+				</div>
+			</div>
+			<div class="mb-4 flex flex-col gap-2">
+				<label for="subject">Temat</label>
+				<input type="text" name="subject" class="input w-full" />
+			</div>
+			<div class="mb-2 flex flex-col gap-2">
+				<label for="message">Treść*</label>
+				<textarea
+					name="message"
+					id=""
+					cols="30"
+					rows="10"
+					class="input w-full"
+					required></textarea>
+			</div>
+			<span class="mb-4 text-zinc-400">* Pola z gwiazdką są wymagane!</span>
+			<div class="mb-8">
 				<input
 					id="agreement"
 					type="checkbox"
@@ -28,11 +48,31 @@ import Footer from "../layouts/Footer.astro";
 					value="true"
 					data-required=""
 					class="field-error"
+					required
 				/>
 				<label for="agreement"
 					>Oświadczam, że zapoznałem się z <a href="#">Polityką prywatności</a> i
 					akceptuję jej postanowienia. Moje dane osobowe, wskazane w formularzu,
 					będą przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie.</label
+				>
+			</div>
+			<!-- {if $show_captcha} -->
+			<div class="">
+				<div id="captcha"></div>
+				<div class="clear"></div>
+				<input
+					class="form-field input"
+					type="text"
+					name="captcha_code"
+					placeholder="Kod z obrazka*"
+					data-required
+					required
+				/>
+			</div>
+			<!-- {/if} -->
+			<div class="flex justify-end">
+				<button class="button_secondary w-full" type="submit" name="send"
+					>Wyślij<span class="material-symbols-outlined">send</span></button
 				>
 			</div>
 		</form>

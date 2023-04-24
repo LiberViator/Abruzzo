@@ -3,25 +3,31 @@
 
 <div class="bg-zinc-100 py-4">
 	<header
-		class="paddings mx-auto mb-6 flex w-full items-center justify-between sm:hidden">
+		class="paddings mx-auto mb-6 flex w-full items-center justify-between sm:hidden"
+	>
 		<button
 			onclick="document.getElementById('filters').style.display === 'none' ? filters.style.display = 'flex' : filters.style.display = 'none'"
 			type="button"
 			class="flex items-center gap-2"
-			aria-expanded="false">
+			aria-expanded="false"
+		>
 			<span class="">Konfiguruj</span>
 			<span class="material-symbols-outlined text-[24px]">tune</span>
 		</button>
 		<a
-			class="text-red"
+			class="flex items-center gap-2 text-center text-red"
 			href="{$smarty.const.BASE_URL}{$smarty.get.page}/"
-			title="wyczyść">Wyczyść filtry</a
+			title="wyczyść"
+			>Wyczyść filtry<span class="material-symbols-outlined"
+				>filter_alt_off</span
+			></a
 		>
 	</header>
 	<form
 		id="filters"
 		style="display: none;"
-		class="paddings mx-auto max-w-4xl flex-col sm:!flex">
+		class="paddings mx-auto max-w-4xl flex-col sm:!flex"
+	>
 		<div class="mb-4 flex flex-col gap-3 sm:flex-row">
 			<div class="flex w-full flex-col">
 				<label class="label mb-2">Szukaj wg kategorii</label>
@@ -30,13 +36,15 @@
 						<div
 							class="select input label flex items-center"
 							tabindex="100"
-							onclick="document.getElementById('categoryList').style.display === 'none' ? categoryList.style.display = 'flex' : categoryList.style.display = 'none'">
+							onclick="document.getElementById('categoryList').style.display === 'none' ? categoryList.style.display = 'flex' : categoryList.style.display = 'none'"
+						>
 							Wybierz
 						</div>
 						<ul
 							id="categoryList"
 							class="items input absolute top-12 flex max-h-64 w-full flex-col gap-4 overflow-y-scroll border-t-0 py-4 shadow-lg"
-							style="display: none">
+							style="display: none"
+						>
 							<li>
 								<a href="#" data-toggle="dropdown-check-all"
 									>Zaznasz wszystkie</a
@@ -51,7 +59,7 @@
 
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Widełki cenowe</label>
-				<div class="flex gap-3">
+				<div class="flex gap-4">
 					<input
 						class="input w-full"
 						type="text"
@@ -68,7 +76,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mb-8 flex flex-col gap-3 sm:flex-row">
+		<div class="mb-8 flex flex-col gap-4 sm:flex-row">
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Alfabetycznie</label>
 				<select class="select input" name="ord[alphabetical]">
@@ -93,14 +101,18 @@
 		</div>
 		<div class="flex flex-wrap items-end justify-end gap-4">
 			<a
-				class="flex h-12 flex-[1_1_200px] items-center justify-center border border-red text-center font-semibold text-red hover:bg-red hover:text-white sm:max-w-[256px]"
+				class="button_secondary flex-[1_1_200px] border-red bg-lightred text-red hover:bg-red"
 				href="{$smarty.const.BASE_URL}{$smarty.get.page}/"
-				title="wyczyść">Wyczyść filtry</a
+				title="wyczyść"
+				>Wyczyść filtry<span class="material-symbols-outlined"
+					>filter_alt_off</span
+				></a
 			>
 			<button
-				class="flex h-12 flex-[1_1_200px] items-center justify-center bg-blue text-center font-semibold text-white sm:max-w-[256px]"
+				class="button_secondary flex-[1_1_200px]"
 				name="search"
-				type="submit">Wyszukaj</button
+				type="submit"
+				>Wyszukaj<span class="material-symbols-outlined">search</span></button
 			>
 		</div>
 	</form>

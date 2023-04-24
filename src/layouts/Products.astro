@@ -4,12 +4,15 @@ import ProductCard from "../components/ProductCard.astro";
 ---
 
 <section id="produkty" class="overflow-hidden bg-zinc-100 py-12">
-	<div class="mx-auto flex w-full max-w-4xl flex-col items-center">
+	<div
+		class="mx-auto flex w-full max-w-4xl flex-col items-center overflow-visible"
+	>
 		<Title title="Nasze produkty" />
 
-		<div class="paddings embla mb-8 w-full overflow-hidden">
+		<div class="slider mb-8 w-full">
 			<div
-				class="embla__container grid grid-cols-[repeat(3,minmax(min(256px,100%),320px))] gap-4 lg:gap-8">
+				class="paddings grid grid-cols-[repeat(3,minmax(min(256px,100%),320px))] gap-4 lg:gap-8"
+			>
 				<ProductCard
 					icon="/assets/images/gear.svg"
 					title="Comarch ERP Optima Płace i Kadry"

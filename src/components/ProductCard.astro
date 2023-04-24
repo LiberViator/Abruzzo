@@ -2,7 +2,9 @@
 const { icon, title, desc, price, cta } = Astro.props;
 ---
 
-<div class="embla__slide flex flex-col border bg-white pt-8 md:flex-1">
+<div
+	class="flex snap-mandatory snap-center flex-col border bg-white pt-8 md:flex-1"
+>
 	<div class="mx-6 flex justify-center">
 		<img class="mb-8" width="80" width="80" src={icon} alt="illustration" />
 	</div>
@@ -22,7 +24,8 @@ const { icon, title, desc, price, cta } = Astro.props;
 		cta ? (
 			<a
 				class="bg-blue hover:bg-yellow flex h-14 w-full flex-row items-center justify-center gap-2 font-semibold text-white transition-colors hover:text-black"
-				href="https://abruzzo.com.pl/oprogramowanie/">
+				href="https://abruzzo.com.pl/oprogramowanie/"
+			>
 				Więcej o produkcie
 			</a>
 		) : undefined
