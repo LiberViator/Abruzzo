@@ -1,10 +1,12 @@
 ---
 const { name, price, desc } = Astro.params;
+import Title from "../components/Title.astro";
 ---
 
 <main class="py-12">
 	<section
-		class="paddings mx-auto mb-12 flex max-w-4xl flex-col gap-x-8 gap-y-4 sm:flex-row">
+		class="paddings mx-auto mb-12 flex max-w-4xl flex-col gap-x-8 gap-y-4 sm:flex-row"
+	>
 		<div class="h-auto max-h-72 w-full flex-[5] overflow-hidden rounded">
 			<img
 				src="/assets/images/comarch.png"
@@ -23,9 +25,10 @@ const { name, price, desc } = Astro.params;
 			<span class="h-full"></span>
 			<button
 				type="button"
-				class="flex h-12 w-full flex-shrink-0 items-center justify-center border border-blue text-center font-semibold text-blue hover:bg-blue hover:text-white"
+				class="button_secondary max-w-none flex-shrink-0"
 				data-toggle="modal"
-				data-target="#modal-form">
+				data-target="#modal-form"
+			>
 				Zadaj pytanie
 			</button>
 		</div>
@@ -49,3 +52,90 @@ const { name, price, desc } = Astro.params;
 		</p>
 	</section>
 </main>
+<aside
+	class="paddings modal absolute inset-0 z-10 flex items-center justify-center bg-black/50 py-6"
+	id="modal-form"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="exampleModalLabel"
+	aria-hidden="true"
+>
+	<div class="relative max-w-xl bg-white px-6 py-6" role="document">
+		<header class="">
+			<Title title="Zadaj pytanie o produkt" />
+			<button
+				type="button"
+				class="close absolute right-6 top-6"
+				data-dismiss="modal"
+				aria-label="Close"
+			>
+				<span class="material-symbols-outlined">close</span>
+			</button>
+		</header>
+
+		<form
+			id="form-offer"
+			action="{$smarty.const.BASE_URL}bat/ajaxOfferForm.php"
+			method="post"
+			class=""
+		>
+			<input type="hidden" name="product" value="{$product.product_name}" />
+			<fieldset class="">
+				<div class="mb-4 flex w-full flex-col gap-2">
+					<label for="email">Adres E-mail*</label>
+					<input
+						type="email"
+						name="email"
+						class="input w-full"
+						data-describedby="email"
+						data-description="email"
+						data-validate="email"
+						required
+					/>
+				</div>
+
+				<div class="mb-4 flex w-full flex-col gap-2">
+					<label for="email">Numer telefonu*</label>
+					<input
+						class="input"
+						type="phone"
+						name="phone"
+						placeholder=""
+						required
+					/>
+				</div>
+
+				<div class="mb-4 flex w-full flex-col gap-2">
+					<label for="email">Treść*</label>
+					<textarea class="input" name="message" rows="6" required data-required
+					></textarea>
+				</div>
+
+				<div class="mb-8">
+					<input
+						id="agreement"
+						type="checkbox"
+						name="agreement"
+						value="true"
+						data-required=""
+						class="field-error"
+						required
+					/>
+					<label for="agreement"
+						>Oświadczam, że zapoznałem się z <a href="#">Polityką prywatności</a
+						> i akceptuję jej postanowienia. Moje dane osobowe, wskazane w formularzu,
+						będą przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie.</label
+					>
+				</div>
+
+				<div class="">
+					<button class="button_secondary" type="submit" name="send">
+						Wyślij
+						<span class="material-symbols-outlined">send</span>
+					</button>
+					<span class="mb-4 text-zinc-400">* Pola z gwiazdką są wymagane!</span>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</aside>
