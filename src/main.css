@@ -26,6 +26,27 @@
 }
 
 @layer base {
+	.post h3:not(:last-child) {
+		@apply mt-6;
+		@apply mb-3;
+		@apply font-semibold;
+		@apply items-start;
+	}
+	.post p:not(:last-child) {
+		@apply text-base/7;
+		@apply mb-3;
+	}
+	.post strong {
+		@apply font-semibold;
+	}
+	.post a {
+		@apply text-blue;
+		@apply font-semibold;
+	}
+	.post hr {
+		@apply mb-3;
+	}
+
 	html {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
