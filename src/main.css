@@ -26,15 +26,15 @@
 }
 
 @layer base {
-	.post h3:not(:last-child) {
+	.post h3 {
 		@apply mt-6;
 		@apply mb-3;
 		@apply font-semibold;
 		@apply items-start;
 	}
-	.post p:not(:last-child) {
+	.post p {
 		@apply text-base/7;
-		@apply mb-3;
+		@apply mb-4;
 	}
 	.post strong {
 		@apply font-semibold;
@@ -44,7 +44,7 @@
 		@apply font-semibold;
 	}
 	.post hr {
-		@apply mb-3;
+		@apply mb-4;
 	}
 
 	html {
