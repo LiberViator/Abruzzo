@@ -3,9 +3,7 @@
 
 <header class="sticky top-0 z-10">
 	<div class="paddings flex h-8 justify-center bg-zinc-950 text-sm text-white">
-		<ul
-			class="flex w-full max-w-6xl items-center justify-center gap-8 sm:justify-start"
-		>
+		<ul class="flex w-full max-w-6xl items-center justify-center gap-8 sm:justify-start">
 			<li class="hidden gap-2 whitespace-nowrap sm:flex">
 				<span class="material-symbols-outlined text-base/5">schedule</span>
 				<span>Pon - Pt 8:00 - 17:00</span>
@@ -13,32 +11,22 @@
 			<li>
 				<a class="flex gap-2 whitespace-nowrap" href="">
 					<span class="material-symbols-outlined text-base/5">phone</span>
-					<span
-						class="after:content-['Zadzwoń'] sm:after:content-['+48_789_805_663']"
-					></span>
+					<span class="sm:hidden">Zadzwoń</span>
+					<span class="hidden sm:block">+48 789 805_663</span>
 				</a>
 			</li>
 			<li>
 				<a class="flex gap-2 whitespace-nowrap" href="">
 					<span class="material-symbols-outlined text-base/5">mail</span>
-					<span
-						class="after:content-['Napisz_maila'] sm:after:content-['biuro@abruzzo.com.pl']"
-					></span>
+					<span class="sm:hidden">Napisz maila</span>
+					<span class="hidden sm:block">biuro@abruzzo.com.pl</span>
 				</a>
 			</li>
 		</ul>
 	</div>
 	<div class="paddings flex h-20 w-full justify-center bg-white shadow-md">
 		<div class="flex w-full max-w-6xl items-center justify-between">
-			<a class="logo" href=""
-				><img
-					class="img-responsive"
-					src="/assets/images/logo.png"
-					alt=""
-					height="48"
-					width="112"
-				/></a
-			>
+			<a class="logo" href=""><img class="img-responsive" src="/assets/images/logo.png" alt="" height="48" width="112" /></a>
 			<nav class="menu">
 				<a class="current" href="/">Strona główna</a>
 				<a href="/comarch/">Comarch</a>
@@ -57,11 +45,7 @@
 			</button>
 		</div>
 	</div>
-	<div
-		id="navbar"
-		style="display: none;"
-		class="absolute w-full bg-[#f5f5f5] shadow-md sm:!hidden"
-	>
+	<div id="navbar" style="display: none;" class="absolute w-full bg-[#f5f5f5] shadow-md sm:!hidden">
 		<nav class="menu_mobile">
 			<a class="current px-6 py-4 hover:bg-[#eee]" href="/">Strona główna</a>
 			<a class="px-6 py-3 hover:bg-[#eee]" href="/comarch/">Comarch</a>

@@ -13,14 +13,11 @@ const { icon, title, desc, cta } = Astro.props;
 	{
 		cta ? (
 			<a
-				class="text-blue group flex h-20 items-center justify-center gap-2 font-semibold"
-				href="https://abruzzo.com.pl/oprogramowanie/">
+				class="text-abruzzo-blue-500 group flex h-20 items-center justify-center gap-2 font-semibold"
+				href="https://abruzzo.com.pl/oprogramowanie/"
+			>
 				Dowiedz się więcej
-				<img
-					class="transition group-hover:translate-x-2"
-					src="/assets/images/arrow.svg"
-					alt="arrow"
-				/>
+				<img class="transition group-hover:translate-x-2" src="/assets/images/arrow.svg" alt="arrow" />
 			</a>
 		) : undefined
 	}

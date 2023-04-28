@@ -1,10 +1,8 @@
 ---
 ---
 
-<div class="bg-zinc-100 py-4">
-	<header
-		class="paddings mx-auto mb-6 flex w-full items-center justify-between sm:hidden"
-	>
+<div class="py-4">
+	<header class="paddings mx-auto mb-6 flex w-full items-center justify-between sm:hidden">
 		<button
 			onclick="document.getElementById('filters').style.display === 'none' ? filters.style.display = 'flex' : filters.style.display = 'none'"
 			type="button"
@@ -15,19 +13,12 @@
 			<span class="material-symbols-outlined text-[24px]">tune</span>
 		</button>
 		<a
-			class="flex items-center gap-2 text-center text-red"
+			class="flex items-center gap-2 text-center text-abruzzo-red-500"
 			href="{$smarty.const.BASE_URL}{$smarty.get.page}/"
-			title="wyczyść"
-			>Wyczyść filtry<span class="material-symbols-outlined"
-				>filter_alt_off</span
-			></a
+			title="wyczyść">Wyczyść filtry<span class="material-symbols-outlined">filter_alt_off</span></a
 		>
 	</header>
-	<form
-		id="filters"
-		style="display: none;"
-		class="paddings mx-auto max-w-4xl flex-col sm:!flex"
-	>
+	<form id="filters" style="display: none;" class="paddings mx-auto max-w-4xl flex-col sm:!flex">
 		<div class="mb-4 flex flex-col gap-3 sm:flex-row">
 			<div class="flex w-full flex-col">
 				<label class="label mb-2">Szukaj wg kategorii</label>
@@ -46,9 +37,7 @@
 							style="display: none"
 						>
 							<li>
-								<a href="#" data-toggle="dropdown-check-all"
-									>Zaznasz wszystkie</a
-								>
+								<a href="#" data-toggle="dropdown-check-all">Zaznasz wszystkie</a>
 							</li>
 							<!-- {html_checkboxes2 name="tags" options=$arrTags
 							selected=$smarty.get.tags wrapper="li"} -->
@@ -60,19 +49,8 @@
 			<div class="flex w-full flex-col">
 				<label class="mb-2">Widełki cenowe</label>
 				<div class="flex gap-4">
-					<input
-						class="input w-full"
-						type="text"
-						name="price_from"
-						placeholder="Cena od"
-						value="{$smarty.get.price_from}"
-					/>
-					<input
-						class="input w-full"
-						type="text"
-						name="price_to"
-						placeholder="Cena do"
-					/>
+					<input class="input w-full" type="text" name="price_from" placeholder="Cena od" value="{$smarty.get.price_from}" />
+					<input class="input w-full" type="text" name="price_to" placeholder="Cena do" />
 				</div>
 			</div>
 		</div>
@@ -101,17 +79,11 @@
 		</div>
 		<div class="flex flex-wrap items-end justify-end gap-4">
 			<a
-				class="button_secondary flex-[1_1_200px] border-red bg-lightred text-red hover:bg-red"
+				class="button button_secondary flex-[1_1_200px] border-abruzzo-red-300 bg-abruzzo-red-100 text-abruzzo-red-500 hover:border-abruzzo-red-500 hover:bg-abruzzo-red-100"
 				href="{$smarty.const.BASE_URL}{$smarty.get.page}/"
-				title="wyczyść"
-				>Wyczyść filtry<span class="material-symbols-outlined"
-					>filter_alt_off</span
-				></a
+				title="wyczyść">Wyczyść filtry<span class="material-symbols-outlined">filter_alt_off</span></a
 			>
-			<button
-				class="button_secondary flex-[1_1_200px]"
-				name="search"
-				type="submit"
+			<button class="button button_secondary flex-[1_1_200px]" name="search" type="submit"
 				>Wyszukaj<span class="material-symbols-outlined">search</span></button
 			>
 		</div>
