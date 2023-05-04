@@ -52,9 +52,11 @@
 		-moz-osx-font-smoothing: grayscale;
 		font-display: swap;
 		text-rendering: optimizeLegibility;
+		@apply h-full;
 	}
 
 	body {
+		@apply min-h-full;
 		@apply bg-zinc-50;
 	}
 
@@ -169,7 +171,7 @@
 		@apply items-center;
 		@apply font-semibold;
 		@apply gap-2;
-		@apply max-w-[256px];
+		@apply sm:max-w-[256px];
 	}
 	.button_primary {
 		@apply transition-colors;
