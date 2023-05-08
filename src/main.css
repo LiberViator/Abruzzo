@@ -32,13 +32,6 @@
 		@apply font-semibold;
 		@apply items-start;
 	}
-	.post p {
-		@apply text-base/7;
-		@apply mb-4;
-	}
-	.post strong {
-		@apply font-semibold;
-	}
 	.post a {
 		@apply text-abruzzo-blue-500;
 		@apply font-semibold;
@@ -89,7 +82,17 @@
 	}
 
 	p {
-		@apply leading-relaxed;
+		@apply text-base/7;
+	}
+
+	p:not(:last-of-type) {
+		@apply mb-4;
+	}
+	strong {
+		@apply font-semibold;
+	}
+	b {
+		@apply font-semibold;
 	}
 
 	a {
