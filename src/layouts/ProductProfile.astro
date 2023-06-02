@@ -4,15 +4,9 @@ import Title from "../components/Title.astro";
 ---
 
 <main class="py-12">
-	<section
-		class="paddings mx-auto mb-12 flex max-w-4xl flex-col gap-x-8 gap-y-4 sm:flex-row"
-	>
+	<section class="paddings mx-auto mb-12 flex max-w-4xl flex-col gap-x-8 gap-y-4 sm:flex-row">
 		<div class="h-auto max-h-72 w-full flex-[5] overflow-hidden rounded">
-			<img
-				src="/assets/images/comarch.png"
-				alt="illustration"
-				class="h-full w-full bg-slate-50 object-contain"
-			/>
+			<img src="/assets/images/comarch.png" alt="illustration" class="h-full w-full bg-slate-50 object-contain" />
 		</div>
 
 		<div class="flex w-full flex-[3] flex-col">
@@ -23,31 +17,21 @@ import Title from "../components/Title.astro";
 				<span class="text-sm">netto/rok</span>
 			</div>
 			<span class="h-full"></span>
-			<button
-				type="button"
-				class="button_secondary max-w-none flex-shrink-0"
-				data-toggle="modal"
-				data-target="#modal-form"
-			>
+			<button type="button" class="button_secondary max-w-none flex-shrink-0" data-toggle="modal" data-target="#modal-form">
 				Zadaj pytanie
 			</button>
 		</div>
 	</section>
 	<section class="paddings mx-auto max-w-4xl">
 		<p>
-			IBARD to sprawdzone przez tysiące klientów bezpieczne rozwiązanie, które
-			zabezpieczy systemy ERP przed utratą danych. Produkt ten jest dedykowany
-			klientom Comarch, którzy w kilku prostych krokach mogą skonfigurować
-			automatyczną kopię bezpieczeństwa swoich baz. Comarch IBARD ERP Backup
-			10GB oferuje: backup nielimitowanej ilości baz danych backup plików i
-			folderów harmonogram zadań backupu dostęp przez www, aplikację dekstopową
-			oraz mobilną (Android, iOS) własny klucz szyfrujący szyfrowanie transmisji
-			danych wersjonowanie plików (do 20 wersji wstecz) synchronizację danych
-			zaawansowane udostępnianie powiadomienia email o statusie backupu backup
-			lokalizacji sieciowych IBARD cieszy się zaufaniem zarówno małych, średnich
-			jak i dużych firm w całej Europie, które poszukują bezpiecznego systemu do
-			backupu, przechowywania i udostępniania danych. Oferujemy również chmury
-			dedykowane biznesowi, niezwiązanemu z oprogramowaniem Comarch. O
+			IBARD to sprawdzone przez tysiące klientów bezpieczne rozwiązanie, które zabezpieczy systemy ERP przed utratą danych.
+			Produkt ten jest dedykowany klientom Comarch, którzy w kilku prostych krokach mogą skonfigurować automatyczną kopię
+			bezpieczeństwa swoich baz. Comarch IBARD ERP Backup 10GB oferuje: backup nielimitowanej ilości baz danych backup plików i
+			folderów harmonogram zadań backupu dostęp przez www, aplikację dekstopową oraz mobilną (Android, iOS) własny klucz
+			szyfrujący szyfrowanie transmisji danych wersjonowanie plików (do 20 wersji wstecz) synchronizację danych zaawansowane
+			udostępnianie powiadomienia email o statusie backupu backup lokalizacji sieciowych IBARD cieszy się zaufaniem zarówno
+			małych, średnich jak i dużych firm w całej Europie, które poszukują bezpiecznego systemu do backupu, przechowywania i
+			udostępniania danych. Oferujemy również chmury dedykowane biznesowi, niezwiązanemu z oprogramowaniem Comarch. O
 			różnorodności chmur oraz ich możliwości przeczytasz na naszym blogu.
 		</p>
 	</section>
@@ -63,22 +47,12 @@ import Title from "../components/Title.astro";
 	<div class="relative max-w-xl bg-white px-6 py-6" role="document">
 		<header class="">
 			<Title title="Zadaj pytanie o produkt" />
-			<button
-				type="button"
-				class="close absolute right-6 top-6"
-				data-dismiss="modal"
-				aria-label="Close"
-			>
+			<button type="button" class="close absolute right-6 top-6" data-dismiss="modal" aria-label="Close">
 				<span class="material-symbols-outlined">close</span>
 			</button>
 		</header>
 
-		<form
-			id="form-offer"
-			action="{$smarty.const.BASE_URL}bat/ajaxOfferForm.php"
-			method="post"
-			class=""
-		>
+		<form id="form-offer" action="{$smarty.const.BASE_URL}bat/ajaxOfferForm.php" method="post" class="">
 			<input type="hidden" name="product" value="{$product.product_name}" />
 			<fieldset class="">
 				<div class="mb-4 flex w-full flex-col gap-2">
@@ -96,35 +70,19 @@ import Title from "../components/Title.astro";
 
 				<div class="mb-4 flex w-full flex-col gap-2">
 					<label for="email">Numer telefonu*</label>
-					<input
-						class="input"
-						type="phone"
-						name="phone"
-						placeholder=""
-						required
-					/>
+					<input class="input" type="phone" name="phone" placeholder="" required />
 				</div>
 
 				<div class="mb-4 flex w-full flex-col gap-2">
 					<label for="email">Treść*</label>
-					<textarea class="input" name="message" rows="6" required data-required
-					></textarea>
+					<textarea class="input" name="message" rows="6" required data-required></textarea>
 				</div>
 
 				<div class="mb-8">
-					<input
-						id="agreement"
-						type="checkbox"
-						name="agreement"
-						value="true"
-						data-required=""
-						class="field-error"
-						required
-					/>
+					<input id="agreement" type="checkbox" name="agreement" value="true" data-required="" class="field-error" required />
 					<label for="agreement"
-						>Oświadczam, że zapoznałem się z <a href="#">Polityką prywatności</a
-						> i akceptuję jej postanowienia. Moje dane osobowe, wskazane w formularzu,
-						będą przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie.</label
+						>Oświadczam, że zapoznałem się z <a href="#">Polityką prywatności</a> i akceptuję jej postanowienia. Moje dane osobowe,
+						wskazane w formularzu, będą przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie.</label
 					>
 				</div>
 
@@ -139,3 +97,4 @@ import Title from "../components/Title.astro";
 		</form>
 	</div>
 </aside>
+<span class="hidden aspect-square flex-[1] grid-cols-[repeat(auto-fit,minmax(200px,1fr))]"></span>

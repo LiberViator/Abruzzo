@@ -31,43 +31,21 @@ import Footer from "../layouts/Footer.astro";
 			</div>
 			<div class="mb-2 flex flex-col gap-2">
 				<label for="message">Treść*</label>
-				<textarea
-					name="message"
-					id=""
-					cols="30"
-					rows="10"
-					class="input w-full"
-					required></textarea>
+				<textarea name="message" id="" cols="30" rows="10" class="input w-full" required></textarea>
 			</div>
 			<span class="mb-4 text-zinc-400">* Pola z gwiazdką są wymagane!</span>
 			<div class="mb-8">
-				<input
-					id="agreement"
-					type="checkbox"
-					name="agreement"
-					value="true"
-					data-required=""
-					class="field-error"
-					required
-				/>
+				<input id="agreement" type="checkbox" name="agreement" value="true" data-required="" class="field-error" required />
 				<label for="agreement"
-					>Oświadczam, że zapoznałem się z <a href="#">Polityką prywatności</a> i
-					akceptuję jej postanowienia. Moje dane osobowe, wskazane w formularzu,
-					będą przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie.</label
+					>Oświadczam, że zapoznałem się z <a href="#">Polityką prywatności</a> i akceptuję jej postanowienia. Moje dane osobowe,
+					wskazane w formularzu, będą przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie.</label
 				>
 			</div>
 			<!-- {if $show_captcha} -->
 			<div class="">
 				<div id="captcha"></div>
 				<div class="clear"></div>
-				<input
-					class="form-field input"
-					type="text"
-					name="captcha_code"
-					placeholder="Kod z obrazka*"
-					data-required
-					required
-				/>
+				<input class="form-field input" type="text" name="captcha_code" placeholder="Kod z obrazka*" data-required required />
 			</div>
 			<!-- {/if} -->
 			<div class="flex justify-end">
@@ -76,6 +54,7 @@ import Footer from "../layouts/Footer.astro";
 				>
 			</div>
 		</form>
+		<div class="h-[256px]"></div>
 	</main>
 	<Footer />
 </Layout>
